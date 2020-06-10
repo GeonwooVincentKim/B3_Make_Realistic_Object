@@ -61,6 +61,11 @@ public class MyBall : MonoBehaviour
             rigid.AddForce(Vector3.up * 2, ForceMode.Impulse);
     }
 
+    public void Jump()
+    {
+        rigid.AddForce(Vector3.up * 20, ForceMode.Impulse);
+    }
+
     // Events caused by actual physical collisions.
     void OnCollisionEnter(Collision collision)
     {
@@ -79,11 +84,6 @@ public class MyBall : MonoBehaviour
 
     // Event caused by collider collision.
     void OnTriggerEnter(Collider other)
-    {
-        
-    }
-
-    private void OnTriggerStay(Collider collision)
     {
         
     }
